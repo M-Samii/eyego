@@ -15,8 +15,8 @@ spec:
     spec:
       containers:
       - name: hello-eyego
-       # image: hello-eyego/eyego-app:latest
-        image: mahsamii/eyego-app:latest 
+        image: hello-eyego/eyego-app:latest
+       # image: mahsamii/eyego-app:latest 
         ports:
         - containerPort: 3000
         resources:
