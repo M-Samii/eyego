@@ -2,17 +2,6 @@
 provider "aws" {
   region = var.region
 }
-
-# Optional: S3 backend for state locking (uncomment to enable)
-# terraform {
-#   backend "s3" {
-#     bucket         = "<your-s3-bucket>"
-#     key            = "terraform/state"
-#     region         = "us-east-1"
-#     dynamodb_table = "terraform-locks"
-#   }
-# }
-
 # VPC
 resource "aws_vpc" "main" {
   cidr_block           = "10.0.0.0/16"
@@ -277,7 +266,7 @@ resource "aws_iam_role_policy_attachment" "eks_ecr_policy" {
   role       = aws_iam_role.eks_node_role.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
 }
-
+####################################################################################3
 # Data Sources
 data "aws_availability_zones" "available" {
   state = "available"
@@ -293,6 +282,7 @@ variable "eks_node_instance_type" {
   default     = "t2.micro"
 }
 
+##########################################################################
 output "jenkins_public_ip" {
   value = aws_instance.jenkins.public_ip
 }
