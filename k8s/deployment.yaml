@@ -16,8 +16,6 @@ spec:
       containers:
       - name: hello-eyego
         image: 825736768112.dkr.ecr.us-east-1.amazonaws.com/hello-eyego:latest
-
-       # image: mahsamii/eyego-app:latest 
         ports:
         - containerPort: 3000
         resources:

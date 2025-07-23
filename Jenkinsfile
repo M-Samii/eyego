@@ -47,4 +47,3 @@ stage('Deploy to EKS') {
     }
 }
 
-#test
