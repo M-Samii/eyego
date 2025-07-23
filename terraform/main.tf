@@ -212,9 +212,9 @@ resource "aws_eks_node_group" "hello_eyego" {
   subnet_ids      = aws_subnet.public[*].id
   instance_types  = [var.eks_node_instance_type]
   scaling_config {
-    desired_size = 2
-    max_size     = 2
-    min_size     = 2
+    desired_size = 3
+    max_size     = 3
+    min_size     = 3
   }
   depends_on = [
     aws_eks_cluster.hello_eyego,
